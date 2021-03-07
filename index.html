@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PUNTO #1</title>
+	<script >
+		var x =10;
+	</script>
+</head>
+<body onload="hola()">
+
+	<div id="mensaje" class="mensaje"><center></center></div>
+
+	<script >
+
+ function hola(){
+		var mensaje=document.getElementById('mensaje');
+		    mensaje.innerHTML='<h1><center>'+'HOLA'+'</h1></center>';
+		    funcion=setTimeout(sal,5000);
+
+	}
+ function sal()
+      {
+      	nuevo=setInterval(saludo,1000);
+      }
+
+	function saludo(){
+		
+      var mensaje=document.getElementById('mensaje');
+		    mensaje.innerHTML='<h1><center>'+x+'</center></h1>';
+		x=x-1;
+		if(x==-1){
+			clearInterval(nuevo);
+			document.write('<h1><center>'+"Fin"+'</h1></center>');
+		}
+	}
+
+
+
+	</script>
+
+</body>
+</html>
+
+<style type="text/css">
+
+	.mensaje{
+		position: absolute;
+		background-color: #86BDFF;
+		left: 10%;
+		width:80%;
+		height:90%;
+		top:5%;
+		font-size: 700%;
+		color: white;
+		border: solid green 3px;
+		font-family: fantasy;
+		
+	}
